@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #76a2e4;
+  font-family: 'Arimo', sans-serif;
+}
+
+h2 {
+  color: #000;
+  text-align: center;
+  font-size: 2em;
+}
+
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about {
+  display: grid;
+  padding-top: 100px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto)
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  grid-column: 1/4;
+  grid-row: 1;
+
+}
+
+.tabs {
+  display: flex;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  display: inline-block;
+  color: #000;
+  border-radius: 3px 3px 0px 0px;
+}
+
+
+.panels {
+  background: #fffffff6;
+  box-shadow: 0 2rem 2rem #00000080;
+  min-height: 200px;
+  height: 100%;
+  max-width: 1280px;
+  border-radius: 3px;
+
+}
+
+.panel {
+  display: none;
+  animation: fadein .8s;
+  padding: 20px;
+  padding-right: 34%;
+  padding-bottom: 0;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px 0;
+
+}
+
+
+.panel-title {
+  font-size: 1.5em;
+  font-weight: bold
+}
+
+.radio {
+  display: none;
+}
+
+#one:checked~.about #one-panel,
+#two:checked~.about #two-panel,
+#three:checked~.about #three-panel {
+  height: 100%;
+  display: block
+}
+
+#one-panel,
+#one-tab {
+  background-color: yellow;
+}
+
+#two-panel,
+#two-tab {
+  background-color: purple;
+}
+
+#three-panel,
+#three-tab {
+  background-color: rgb(167, 161, 161);
+}
+
+#one:checked~.about #tab-content-one,
+#two:checked~.about #tab-content-two,
+#three:checked~.about #tab-content-three {
+  background-color: green;
+  display: block
+}
+
+#one:checked~.tabs #one-tab,
+#two:checked~.tabs #two-tab,
+#three:checked~.tabs #three-tab {
+  background-color: yellow;
+  color: #000;
+  border-top: 3px solid #000;
+}
+
+.card {
+  grid-column: 3;
+  grid-row: 1;
+  padding: 20px;
+  padding-top: 30px;
+}
+
+.card__additional {
+  width: 100%;
+  min-height: 40px;
+  background-color: grey;
+  position: relative;
+}
+
+.card__header {
+  position: absolute;
+  min-height: 100px;
+  width: 100%;
+  background-color: pink;
+  top: -95px;
+}
+
+.card__content {
+  background-color: red;
+  width: 100%;
+  min-height: 200px;
+  height: 100%;
+}
+
+.block-one {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+}
+
+.tabs-content {
+  grid-column: 1/4;
+  grid-row: 2;
+
+}
+
+.block-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+
+}
+
+.tab-title {
+  padding-left: 20px;
+}
+
+.tqbs {
+  display: flex;
+}
